@@ -27,7 +27,7 @@ func TestRetrieval(t *testing.T) {
 	localNode, err := libp2p.New(ctx)
 	require.NoError(t, err)
 
-	id, err := peer.Decode("12D3KooWRk8482WjWye4YKf4uowcgZNoyWQgWMQAue5q7FfUzHC1") // Change with your PeerID
+	id, err := peer.Decode("12D3KooWRk8482WjWye4YKf4uowcgZNoyWQgWMQAue5q7FfUzHC1") // Change with PeerID of your go-ipfs node
 	require.NoError(t, err)
 	ipfsMultiaddr, err := multiaddr.NewMultiaddr(ipfsAPIMultiaddr)
 	require.NoError(t, err)
@@ -66,7 +66,7 @@ func TestRetrieval(t *testing.T) {
 		fmt.Printf("error: %v\n", err)
 	}
 
-	onetxtCid, _ := cid.Decode("bafkreif5shm27nwnnw2frztc5pmh5m5azhoxfwqhbfimr5cyd53254tzgu")
+	onetxtCid, _ := cid.Decode("bafkreif5shm27nwnnw2frztc5pmh5m5azhoxfwqhbfimr5cyd53254tzgu") // cid of one.txt
 	has, err := bserv.Blockstore().Has(onetxtCid)
 	require.NoError(t, err)
 	fmt.Printf("Has?: %v\n", has)
