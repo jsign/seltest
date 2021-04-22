@@ -1,4 +1,4 @@
-1- Run `go-ipfs` from https://github.com/ipfs/go-ipfs/pull/8084
+1- Run `go-ipfs` from https://github.com/ipfs/go-ipfs/pull/8084 (remember to enable graphsync experimental feature)
 
 2- Do `ipfs add -r --cid-version=1 treetest` in this directory
 
